@@ -2,9 +2,9 @@
   <nav class="menu">
     <div class="menu__nav">
       <ul>
-        <li><router-link to="/">Homme</router-link></li>
+        <li><a>Homme</a></li>
         <li><router-link to="/">Femme</router-link></li>
-        <li><router-link to="/">Concept</router-link></li>
+        <li><a>Concept</a></li>
         <li><router-link to="/faq">FAQ</router-link></li>
       </ul>
     </div>
@@ -43,9 +43,9 @@
     <div class="menu__mobile" v-if="open_menu">
       <button class="mobile__close-btn" @click="open_menu = false">✖</button>
       <ul>
-        <li><router-link to="/">Homme</router-link></li>
+        <li><a>Homme</a></li>
         <li><router-link to="/">Femme</router-link></li>
-        <li><router-link to="/">Concept</router-link></li>
+        <li><a>Concept</a></li>
         <li><router-link to="/faq">FAQ</router-link></li>
       </ul>
     </div>
@@ -71,6 +71,13 @@ export default {
       cart_count: 2,
       open_menu: false,
     };
+  },
+  watch: {
+    $route(to) {
+      if (to) {
+        this.open_menu = false;
+      }
+    },
   },
   computed: {
     // to colored the svg logo
@@ -126,6 +133,12 @@ export default {
       text-align: center;
       width: 100%;
 
+      li {
+        a.router-link-active {
+          color: #ccc;
+        }
+      }
+
       li:not(:last-of-type) {
         border-bottom: 1px solid #f3f3f3;
       }
@@ -162,6 +175,10 @@ export default {
   .menu__burger {
     margin-left: 1rem;
     width: 40px;
+
+    a {
+      display: flex;
+    }
   }
 
   @include media-min("1000px") {
@@ -200,9 +217,16 @@ export default {
               transition: width 0.2s linear;
             }
 
-            &:hover {
+            &:hover,
+            &.router-link-active {
               &:after {
                 width: 100%;
+              }
+            }
+
+            &.router-link-active {
+              &::after {
+                background-color: orange;
               }
             }
           }
