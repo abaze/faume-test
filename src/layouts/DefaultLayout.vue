@@ -86,7 +86,7 @@ footer.footer {
     align-items: center;
     gap: 3rem;
     justify-content: center;
-    font-size: 1.5rem;
+    font-size: clamp(1rem, 1vw, 1.5rem);
   }
 }
 </style>

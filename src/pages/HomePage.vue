@@ -155,7 +155,6 @@ section {
     text-align: left;
     padding: 2rem;
     h1 {
-      font-size: 2rem;
       margin-bottom: 2rem;
     }
   }
