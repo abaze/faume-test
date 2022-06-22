@@ -192,14 +192,15 @@ section {
         display: flex;
         justify-content: flex-start;
         align-items: flex-end;
-        transition: background-size 0.3s linear;
+        filter: grayscale(1);
+        transition: filter 0.5s ease-in-out;
 
         &.collection--femme {
           margin-bottom: 0;
           margin-right: 3px;
         }
         &:hover {
-          background-size: 110%;
+          filter: grayscale(0);
         }
 
         a {

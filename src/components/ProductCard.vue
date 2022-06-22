@@ -23,9 +23,7 @@ article {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  flex: 1;
   font-size: 1rem;
-
   img {
     width: 100%;
     aspect-ratio: 1;

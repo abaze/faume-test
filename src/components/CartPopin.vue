@@ -2,7 +2,7 @@
   <div class="overlay">
     <div class="cart">
       <div class="cart__header">
-        <p>Votre panier</p>
+        <h1>Votre panier</h1>
         <button class="cart__close-btn" @click="openCart(false)">✖</button>
       </div>
       <div class="cart__body">
@@ -47,8 +47,8 @@ export default {
   grid-template-rows: auto 1fr;
   left: 50%;
   top: 50%;
-  width: 80vw;
-  height: 80vh;
+  width: 100vw;
+  height: 100vh;
   z-index: 2;
   background-color: #fff;
   color: #000;
@@ -56,7 +56,12 @@ export default {
   box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.5);
   transform: translate(-50%, -50%);
 
-  animation: slideIn 0.3s linear forwards 0.3s;
+  @include media-min("800px") {
+    width: 80vw;
+    height: 80vh;
+  }
+
+  animation: slideIn 0.2s linear forwards 0.3s;
   @keyframes slideIn {
     from {
       opacity: 0;
