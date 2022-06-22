@@ -1,0 +1,26 @@
+:root {  
+  --black: rgb(13, 13, 15);    
+  --white: rgb(255,255,255);
+  --sm: '640px';
+  --md: '768px';
+  --lg: '1024px';
+  --xl: '1280px';
+  --xxl: '1536px';
+}
+// VARS
+$sm : --var(sm);
+$md : --var(md);
+$lg : --var(lg);
+$xl : --var(xl);
+$xxl : --var(xxl);
+
+
+// MIXINS Media Query
+@mixin media-min($_min-width) {
+  @media screen and (min-width: $_min-width) {
+    & {
+      @content;
+    }
+  }
+}
+
