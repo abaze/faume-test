@@ -60,11 +60,10 @@ section {
   align-items: center;
 
   &.section--questions {
-    padding: 4rem;
+    padding: 4rem 1rem;
     background-color: #f3f3f3;
 
     h1 {
-      font-size: 3rem;
       margin-bottom: 3rem;
     }
 
@@ -83,7 +82,6 @@ section {
           display: flex;
           align-items: center;
           justify-content: space-between;
-          font-size: 1rem;
           color: rgb(32, 32, 32);
           width: 100%;
           background-color: #fff;

@@ -71,11 +71,11 @@ h2 {
 }
 
 h1 {
-  font-size: clamp(1.5rem, 5vw, 3rem);
+  font-size: clamp(1.5rem, 5vw, 2.5rem);
 }
 
 h2 {
-  font-size: clamp(1rem, 5vw, 2rem);
+  font-size: clamp(1rem, 5vw, 1.5rem);
 }
 
 /* UTILS */
